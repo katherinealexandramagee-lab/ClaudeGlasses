@@ -1,0 +1,27 @@
+{
+  "name": "claudeglasses-twilio-webhook",
+  "version": "1.0.0",
+  "description": "Twilio voice webhook for ClaudeGlasses - enables voice calls to Claude via phone",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev --respawn src/server.ts",
+    "test": "curl -X POST http://localhost:3456/health"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "twilio": "^4.23.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
